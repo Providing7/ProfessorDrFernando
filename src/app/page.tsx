@@ -31,7 +31,7 @@ const stats = [
   { icon: Smile, value: '98%', label: 'Nível de satisfação' },
 ];
 
-const profileImageUrl = "https://i.imgur.com/8Nf4tCj.jpeg";
+const profileImageUrl = "https://i.imgur.com/fEEfrVu.jpeg";
 
 export default function Home() {
   return (
