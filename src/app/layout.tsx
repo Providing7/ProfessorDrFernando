@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Perfil Profissional',
+  title: 'Prof. Dr. Fernando Joaquim de Santana',
   description: 'Página de perfil profissional criada com Firebase Studio',
 };
 

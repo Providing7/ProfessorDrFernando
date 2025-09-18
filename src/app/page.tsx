@@ -15,14 +15,14 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 const professor = {
-  name: 'Dr. Valerio Puggioni',
+  name: 'Prof. Dr. Fernando Joaquim de Santana',
   title: 'Especialista em Liderança e Gestão de Pessoas',
-  bio: 'Com mais de 20 anos de experiência, Dr. Puggioni é uma referência em desenvolvimento de lideranças e gestão de equipes de alta performance. Sua missão é transformar o potencial de profissionais em resultados extraordinários, combinando uma abordagem humanizada com estratégias inovadoras. Apaixonado por educação corporativa, dedica-se a criar ambientes de trabalho mais produtivos, colaborativos e inspiradores.',
+  bio: 'Com mais de 20 anos de experiência, Dr. Santana é uma referência em desenvolvimento de lideranças e gestão de equipes de alta performance. Sua missão é transformar o potencial de profissionais em resultados extraordinários, combinando uma abordagem humanizada com estratégias inovadoras. Apaixonado por educação corporativa, dedica-se a criar ambientes de trabalho mais produtivos, colaborativos e inspiradores.',
   location: 'Florianópolis, SC, Brasil',
-  email: 'contato@valeriopuggioni.com',
+  email: 'contato@fernandosantana.com',
   phone: '+55 (48) 99999-9999',
-  linkedin: 'https://linkedin.com/in/valeriopuggioni',
-  website: 'https://valeriopuggioni.com',
+  linkedin: 'https://linkedin.com/in/fernandojsantana',
+  website: 'https://fernandosantana.com',
 };
 
 const stats = [
@@ -54,7 +54,7 @@ export default function Home() {
           <div className="relative h-48 w-48 shrink-0 md:h-64 md:w-64">
             <Image
               src="https://picsum.photos/seed/prof/400/400"
-              alt="Foto de perfil do Dr. Valerio Puggioni"
+              alt={`Foto de perfil do ${professor.name}`}
               fill
               priority
               className="rounded-full object-cover shadow-lg ring-4 ring-accent/50"
