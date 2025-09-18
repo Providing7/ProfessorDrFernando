@@ -13,6 +13,7 @@ import { Separator } from '@/components/ui/separator';
 import { Icons } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const professor = {
   name: 'Prof. Dr. Fernando Joaquim de Santana',
@@ -30,6 +31,8 @@ const stats = [
   { icon: CalendarDays, value: '20+', label: 'Anos de experiência' },
   { icon: Smile, value: '98%', label: 'Nível de satisfação' },
 ];
+
+const profileImage = PlaceHolderImages.find(p => p.id === 'professor-profile');
 
 export default function Home() {
   return (
@@ -53,12 +56,13 @@ export default function Home() {
         <div className="flex flex-col items-center gap-8 text-center md:flex-row md:gap-12 md:text-left">
           <div className="relative h-48 w-48 shrink-0 md:h-64 md:w-64">
             <Image
-              src="/profile.jpeg"
+              src={profileImage?.imageUrl || "/placeholder.jpg"}
               alt={`Foto de perfil do ${professor.name}`}
-              fill
+              width={400}
+              height={400}
               priority
               className="rounded-full object-cover shadow-lg ring-4 ring-accent/50"
-              data-ai-hint="professional headshot"
+              data-ai-hint={profileImage?.imageHint || "professional headshot"}
             />
           </div>
           <div className="flex flex-col items-center md:items-start">
