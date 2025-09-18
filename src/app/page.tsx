@@ -53,7 +53,7 @@ export default function Home() {
         <div className="flex flex-col items-center gap-8 text-center md:flex-row md:gap-12 md:text-left">
           <div className="relative h-48 w-48 shrink-0 md:h-64 md:w-64">
             <Image
-              src="https://picsum.photos/seed/prof/400/400"
+              src="/profile.jpeg"
               alt={`Foto de perfil do ${professor.name}`}
               fill
               priority
