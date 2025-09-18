@@ -1,10 +1,3 @@
 {
-  "placeholderImages": [
-    {
-      "id": "professor-profile",
-      "description": "A professional headshot of the professor.",
-      "imageUrl": "https://picsum.photos/seed/prof/400/400",
-      "imageHint": "professional headshot"
-    }
-  ]
+  "placeholderImages": []
 }
