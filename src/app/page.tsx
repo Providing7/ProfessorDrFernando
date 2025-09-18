@@ -1,15 +1,12 @@
 import Image from 'next/image';
 import {
-  MapPin,
   Mail,
+  MapPin,
   Phone,
   Globe,
-  Award,
-  Presentation,
   Users,
   CalendarDays,
   Smile,
-  ArrowRight,
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -34,24 +31,26 @@ const stats = [
   { icon: Smile, value: '98%', label: 'Nível de satisfação' },
 ];
 
-const certifications = [
-  { name: 'Professional Certified Coach (PCC)', issuer: 'International Coach Federation' },
-  { name: 'Master of Business Administration (MBA)', issuer: 'Universidade de São Paulo' },
-  { name: 'Certificação em Liderança Estratégica', issuer: 'Harvard Business School' },
-  { name: 'Agile Certified Practitioner (PMI-ACP)', issuer: 'Project Management Institute' },
-];
-
-const talks = [
-  { title: 'O Futuro da Liderança no Mundo Digital', event: 'Congresso Nacional de Gestão, 2023' },
-  { title: 'Inteligência Emocional para Equipes de Alta Performance', event: 'Semana da Inovação, 2022' },
-  { title: 'Como Construir uma Cultura Organizacional Forte', event: 'Webinar Liderança Exponencial, 2021' },
-];
-
 export default function Home() {
   return (
     <div className="bg-background min-h-screen font-body text-foreground/90">
+      <header className="bg-white shadow-sm">
+        <div className="container mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
+            <div className="flex items-center space-x-4">
+                <span className="font-semibold text-primary">Sobre</span>
+                <span className="text-gray-300">|</span>
+                <Link href="/certificacoes" className="text-primary hover:underline">
+                    Certificados
+                </Link>
+                <span className="text-gray-300">|</span>
+                <Link href="/palestras" className="text-primary hover:underline">
+                    Palestras
+                </Link>
+            </div>
+        </div>
+      </header>
       <main className="container mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
-        <header className="flex flex-col items-center gap-8 text-center md:flex-row md:gap-12 md:text-left">
+        <div className="flex flex-col items-center gap-8 text-center md:flex-row md:gap-12 md:text-left">
           <div className="relative h-48 w-48 shrink-0 md:h-64 md:w-64">
             <Image
               src="https://picsum.photos/seed/prof/400/400"
@@ -98,7 +97,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-        </header>
+        </div>
 
         <Separator className="my-12 bg-border/50" />
 
@@ -130,49 +129,6 @@ export default function Home() {
             ))}
           </div>
         </section>
-
-        <Separator className="my-12 bg-border/50" />
-
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-          <section id="certificacoes">
-            <h2 className="font-headline text-3xl font-bold text-primary">Certificações</h2>
-            <ul className="mt-6 space-y-4">
-              {certifications.slice(0, 2).map((cert, index) => (
-                <li key={index} className="flex items-start gap-4 rounded-lg p-3 transition-colors hover:bg-card/70">
-                  <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/50">
-                    <Award className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-headline font-semibold text-foreground">{cert.name}</h3>
-                    <p className="text-sm text-muted-foreground">{cert.issuer}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-             <Button asChild variant="link" className="mt-4 px-0 text-primary">
-              <Link href="/certificacoes">
-                Ver todas as certificações <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </section>
-
-          <section id="palestras">
-            <h2 className="font-headline text-3xl font-bold text-primary">Palestras</h2>
-            <ul className="mt-6 space-y-4">
-              {talks.map((talk, index) => (
-                <li key={index} className="flex items-start gap-4 rounded-lg p-3 transition-colors hover:bg-card/70">
-                  <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/50">
-                    <Presentation className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-headline font-semibold text-foreground">{talk.title}</h3>
-                    <p className="text-sm text-muted-foreground">{talk.event}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </section>
-        </div>
       </main>
       <footer className="mt-16 border-t border-border/50 bg-card/50 py-6">
         <div className="container mx-auto max-w-5xl text-center text-sm text-muted-foreground">

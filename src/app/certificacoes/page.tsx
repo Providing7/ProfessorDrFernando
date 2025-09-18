@@ -101,7 +101,7 @@ export default function CertificacoesPage() {
                 <span className="text-gray-300">|</span>
                 <span className="font-semibold text-primary">Certificados</span>
                 <span className="text-gray-300">|</span>
-                <Link href="#" className="text-primary hover:underline">
+                <Link href="/palestras" className="text-primary hover:underline">
                     Palestras
                 </Link>
             </div>
