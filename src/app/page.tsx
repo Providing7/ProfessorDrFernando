@@ -9,11 +9,13 @@ import {
   Users,
   CalendarDays,
   Smile,
+  ArrowRight,
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Icons } from '@/components/icons';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const professor = {
   name: 'Dr. Valerio Puggioni',
@@ -135,7 +137,7 @@ export default function Home() {
           <section id="certificacoes">
             <h2 className="font-headline text-3xl font-bold text-primary">Certificações</h2>
             <ul className="mt-6 space-y-4">
-              {certifications.map((cert, index) => (
+              {certifications.slice(0, 2).map((cert, index) => (
                 <li key={index} className="flex items-start gap-4 rounded-lg p-3 transition-colors hover:bg-card/70">
                   <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/50">
                     <Award className="h-5 w-5 text-primary" />
@@ -147,6 +149,11 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+             <Button asChild variant="link" className="mt-4 px-0 text-primary">
+              <Link href="/certificacoes">
+                Ver todas as certificações <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </section>
 
           <section id="palestras">
