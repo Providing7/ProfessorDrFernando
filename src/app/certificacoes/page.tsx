@@ -15,7 +15,7 @@ type Certification = {
   type: string;
   title: string;
   issuer: string;
-  year: number;
+  year: string;
   description: string;
   detailsLink?: string;
 };
@@ -23,57 +23,57 @@ type Certification = {
 const certifications: Certification[] = [
   {
     category: 'Acadêmico',
-    type: 'Doutorado',
-    title: 'PhD em Administração de Empresas',
-    issuer: 'Universidade de São Paulo (USP)',
-    year: 2015,
-    description: 'Tese: "Impacto da Liderança Transformacional na Performance Organizacional"',
-    detailsLink: '#',
+    type: 'Mestrado',
+    title: 'Mestrado em Ciências da Educação',
+    issuer: 'Instituição de Ensino',
+    year: 'Não informado',
+    description: 'Diploma e histórico do mestrado em ciências da educação.',
+    detailsLink: 'https://drive.google.com/file/d/11OSDCx8X85oXbxMAjpGOOtDGtktirX0r/view?usp=drive_link',
   },
   {
     category: 'Acadêmico',
-    type: 'Mestrado',
-    title: 'Mestrado em Gestão de Recursos Humanos',
-    issuer: 'Fundação Getúlio Vargas (FGV)',
-    year: 2010,
-    description: 'Dissertação sobre desenvolvimento de competências de liderança',
-    detailsLink: '#',
+    type: 'Graduação',
+    title: 'Graduação em Pedagogia',
+    issuer: 'Instituição de Ensino',
+    year: 'Não informado',
+    description: 'Diploma de graduação em pedagogia.',
+    detailsLink: 'https://drive.google.com/file/d/1JGsSEfUtVWgCPdEh3qNbQMbXo5ssWlq1/view?usp=drive_link',
   },
   {
     category: 'Profissional',
-    type: 'Certificação',
-    title: 'Certified Executive Coach',
-    issuer: 'International Coach Federation (ICF)',
-    year: 2018,
-    description: 'Certificação internacional em coaching executivo',
-    detailsLink: '#',
+    type: 'Especialização',
+    title: 'Psicopedagogia Institucional',
+    issuer: 'Instituição de Ensino',
+    year: 'Não informado',
+    description: 'Diploma e histórico da especialização em psicopedagogia institucional.',
+    detailsLink: 'https://drive.google.com/file/d/1jkQwGrO0S8txafrAsjhe4bbdRok2pRYD/view?usp=drive_link',
   },
   {
     category: 'Profissional',
-    type: 'Certificação',
-    title: 'Project Management Professional (PMP)',
-    issuer: 'Project Management Institute (PMI)',
-    year: 2016,
-    description: 'Certificação em gerenciamento de projetos',
-    detailsLink: '#',
+    type: 'Especialização',
+    title: 'Educação Especial',
+    issuer: 'Instituição de Ensino',
+    year: 'Não informado',
+    description: 'Diploma e histórico da especialização em educação especial.',
+    detailsLink: 'https://drive.google.com/file/d/1HHCepXW46dgCbrFI71pJmt_fKRp8vXLO/view?usp=drive_link',
   },
   {
-    category: 'Executivo',
-    type: 'Programa Executivo',
-    title: 'Leadership Development Program',
-    issuer: 'Harvard Business School',
-    year: 2019,
-    description: 'Programa intensivo de desenvolvimento de liderança',
-    detailsLink: '#',
+    category: 'Acadêmico',
+    type: 'Doutorado',
+    title: 'Doutorado (França)',
+    issuer: 'Instituição de Ensino',
+    year: 'Não informado',
+    description: 'Diploma de doutorado obtido na França.',
+    detailsLink: 'https://drive.google.com/file/d/1bW2ylVLmbFtm-x8SQvr24rpTzUahhMsz/view?usp=drive_link',
   },
   {
-    category: 'Executivo',
-    type: 'Curso',
-    title: 'Digital Transformation Strategy',
-    issuer: 'MIT Sloan School',
-    year: 2021,
-    description: 'Estratégias para transformação digital organizacional',
-    detailsLink: '#',
+    category: 'Acadêmico',
+    type: 'Documento',
+    title: 'Histórico do Mestrado',
+    issuer: 'Instituição de Ensino',
+    year: 'Não informado',
+    description: 'Histórico completo do mestrado em ciências da educação.',
+    detailsLink: 'https://drive.google.com/file/d/1eBSLXNmnK7j-Wxtc9_WNu3v8TQN4h8vC/view?usp=drive_link',
   },
 ];
 
@@ -151,7 +151,7 @@ export default function CertificacoesPage() {
                 
                 <div className="mt-6 text-right">
                     <Button variant="link" asChild className="text-primary">
-                        <Link href={cert.detailsLink || '#'}>
+                        <Link href={cert.detailsLink || '#'} target="_blank" rel="noopener noreferrer">
                             Ver detalhes <ExternalLink className="ml-2 h-4 w-4" />
                         </Link>
                     </Button>
