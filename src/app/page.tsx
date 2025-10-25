@@ -7,6 +7,7 @@ import {
   Users,
   CalendarDays,
   Smile,
+  GraduationCap,
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -27,7 +28,7 @@ const professor = {
 
 const stats = [
   { icon: CalendarDays, value: '20+', label: 'Anos de experiência' },
-  { icon: Smile, value: '98%', label: 'Nível de satisfação' },
+  { icon: GraduationCap, value: '5+', label: 'Graduações' },
 ];
 
 const profileImageUrl = "https://i.imgur.com/fEEfrVu.jpeg";
