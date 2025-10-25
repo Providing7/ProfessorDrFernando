@@ -29,6 +29,7 @@ const professor = {
 const stats = [
   { icon: CalendarDays, value: '20+', label: 'Anos de experiência' },
   { icon: GraduationCap, value: '5+', label: 'Graduações' },
+  { icon: Smile, value: '98%', label: 'De satisfação' },
 ];
 
 const profileImageUrl = "https://i.imgur.com/fEEfrVu.jpeg";
@@ -114,7 +115,7 @@ export default function Home() {
         <Separator className="my-12 bg-border/50" />
         
         <section id="destaques">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {stats.map((stat, index) => (
               <Card key={index} className="transform border-border/50 bg-card/70 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
