@@ -46,7 +46,7 @@ export default function Home() {
                 </Link>
                 <span className="text-gray-300">|</span>
                 <Link href="/palestras" className="text-primary hover:underline">
-                    Palestras
+                    Vídeos e Mídia
                 </Link>
             </div>
         </div>

@@ -102,7 +102,7 @@ export default function CertificacoesPage() {
                 <span className="font-semibold text-primary">Certificados</span>
                 <span className="text-gray-300">|</span>
                 <Link href="/palestras" className="text-primary hover:underline">
-                    Palestras
+                    Vídeos e Mídia
                 </Link>
             </div>
         </div>

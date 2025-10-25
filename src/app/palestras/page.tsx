@@ -37,14 +37,14 @@ export default function PalestrasPage() {
               Certificados
             </Link>
             <span className="text-gray-300">|</span>
-            <span className="font-semibold text-primary">Palestras</span>
+            <span className="font-semibold text-primary">Vídeos e Mídia</span>
           </div>
         </div>
       </header>
       <main className="container mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold font-headline text-gray-800">
-            Palestras e Entrevistas
+            Vídeos e Mídia
           </h1>
           <p className="mt-2 text-lg text-gray-600">
             Compartilhando conhecimento e inspirando através de vídeos e
