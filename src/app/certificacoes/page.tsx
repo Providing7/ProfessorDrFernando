@@ -1,3 +1,5 @@
+'use client';
+
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -8,6 +10,7 @@ import {
   ExternalLink,
   GraduationCap,
 } from 'lucide-react';
+import { HeaderNavigation } from '@/components/header-navigation';
 import Link from 'next/link';
 
 type Certification = {
@@ -94,17 +97,7 @@ export default function CertificacoesPage() {
     <div className="bg-gray-50 min-h-screen">
       <header className="bg-white shadow-sm">
         <div className="container mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
-            <div className="flex items-center space-x-4">
-                <Link href="/" className="text-primary hover:underline">
-                    Sobre
-                </Link>
-                <span className="text-gray-300">|</span>
-                <span className="font-semibold text-primary">Certificados</span>
-                <span className="text-gray-300">|</span>
-                <Link href="/palestras" className="text-primary hover:underline">
-                    Vídeos e Mídia
-                </Link>
-            </div>
+          <HeaderNavigation />
         </div>
       </header>
       <main className="container mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">

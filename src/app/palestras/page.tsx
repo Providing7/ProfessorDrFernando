@@ -1,6 +1,8 @@
-import Link from 'next/link';
+'use client';
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Video } from 'lucide-react';
+import { HeaderNavigation } from '@/components/header-navigation';
 
 type YouTubeVideo = {
   title: string;
@@ -28,17 +30,7 @@ export default function PalestrasPage() {
     <div className="bg-gray-50 min-h-screen">
       <header className="bg-white shadow-sm">
         <div className="container mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
-          <div className="flex items-center space-x-4">
-            <Link href="/" className="text-primary hover:underline">
-              Sobre
-            </Link>
-            <span className="text-gray-300">|</span>
-            <Link href="/certificacoes" className="text-primary hover:underline">
-              Certificados
-            </Link>
-            <span className="text-gray-300">|</span>
-            <span className="font-semibold text-primary">Vídeos e Mídia</span>
-          </div>
+          <HeaderNavigation />
         </div>
       </header>
       <main className="container mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">

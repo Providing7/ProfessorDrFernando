@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import {
   Mail,
@@ -12,8 +14,8 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Icons } from '@/components/icons';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Button } from '@/components/ui/button'; 
+import { HeaderNavigation } from '@/components/header-navigation';
 
 const professor = {
   name: 'Prof. Dr. Fernando Joaquim de Santana',
@@ -39,17 +41,7 @@ export default function Home() {
     <div className="bg-background min-h-screen font-body text-foreground/90">
       <header className="bg-white shadow-sm">
         <div className="container mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
-            <div className="flex items-center space-x-4">
-                <span className="font-semibold text-primary">Sobre</span>
-                <span className="text-gray-300">|</span>
-                <Link href="/certificacoes" className="text-primary hover:underline">
-                    Certificados
-                </Link>
-                <span className="text-gray-300">|</span>
-                <Link href="/palestras" className="text-primary hover:underline">
-                    Vídeos e Mídia
-                </Link>
-            </div>
+          <HeaderNavigation />
         </div>
       </header>
       <main className="container mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
